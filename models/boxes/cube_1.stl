@@ -1,0 +1,86 @@
+solid solidname
+ facet normal 0 0 -1
+  outer loop
+    vertex -19.2159 42.8575 0
+    vertex -19.2159 22.8575 0
+    vertex -39.2159 22.8575 0
+  endloop
+ endfacet
+ facet normal 0 0 -1
+  outer loop
+    vertex -19.2159 42.8575 0
+    vertex -39.2159 22.8575 0
+    vertex -39.2159 42.8575 0
+  endloop
+ endfacet
+ facet normal 0 0 1
+  outer loop
+    vertex -19.2159 42.8575 10
+    vertex -39.2159 42.8575 10
+    vertex -39.2159 22.8575 10
+  endloop
+ endfacet
+ facet normal 0 0 1
+  outer loop
+    vertex -19.2159 42.8575 10
+    vertex -39.2159 22.8575 10
+    vertex -19.2159 22.8575 10
+  endloop
+ endfacet
+ facet normal 1 -5.72205e-07 -3.8147e-07
+  outer loop
+    vertex -19.2159 42.8575 0
+    vertex -19.2159 42.8575 10
+    vertex -19.2159 22.8575 10
+  endloop
+ endfacet
+ facet normal 1 0 7.62939e-07
+  outer loop
+    vertex -19.2159 42.8575 0
+    vertex -19.2159 22.8575 10
+    vertex -19.2159 22.8575 0
+  endloop
+ endfacet
+ facet normal -3.8147e-07 -1 -3.8147e-07
+  outer loop
+    vertex -19.2159 22.8575 0
+    vertex -19.2159 22.8575 10
+    vertex -39.2159 22.8575 10
+  endloop
+ endfacet
+ facet normal -1.90735e-07 -1 -7.27596e-14
+  outer loop
+    vertex -19.2159 22.8575 0
+    vertex -39.2159 22.8575 10
+    vertex -39.2159 22.8575 0
+  endloop
+ endfacet
+ facet normal -1 3.8147e-07 -3.8147e-07
+  outer loop
+    vertex -39.2159 22.8575 0
+    vertex -39.2159 22.8575 10
+    vertex -39.2159 42.8575 10
+  endloop
+ endfacet
+ facet normal -1 1.90735e-07 7.27596e-14
+  outer loop
+    vertex -39.2159 22.8575 0
+    vertex -39.2159 42.8575 10
+    vertex -39.2159 42.8575 0
+  endloop
+ endfacet
+ facet normal 3.8147e-07 1 3.8147e-07
+  outer loop
+    vertex -19.2159 42.8575 10
+    vertex -19.2159 42.8575 0
+    vertex -39.2159 42.8575 0
+  endloop
+ endfacet
+ facet normal 3.8147e-07 1 3.8147e-07
+  outer loop
+    vertex -19.2159 42.8575 10
+    vertex -39.2159 42.8575 0
+    vertex -39.2159 42.8575 10
+  endloop
+ endfacet
+endsolid solidname
