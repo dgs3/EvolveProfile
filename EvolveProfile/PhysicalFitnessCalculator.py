@@ -44,7 +44,7 @@ class PhysicalFitnessCalculator(object):
                 os.path.join(EvolveProfile.s3g_path, path_to_print_exe),
                 '-f %s' % (all_path)
             ])
-            fitnesses = self.HCI.ask_fitness()
+            fitnesses = self.HCI.ask_fitness(num_models)
             fitness.extend(fitnesses)
             copy_genotypes = copy_genotypes[num_models:]
         return fitness
