@@ -1,3 +1,8 @@
+"""
+A genotype which contains a slicing profile.
+Contains the profile map template, and the genotype
+"""
+
 from __future__ import absolute_import
 
 import random

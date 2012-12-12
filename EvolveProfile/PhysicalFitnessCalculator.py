@@ -1,6 +1,12 @@
-import subprocess
-import os
+"""
+The physical fitness calculator
+"""
+
+
+from ___future___ import unicode_literals, print_function
 import json
+import os
+import subprocess
 import tempfile
 
 import EvolveProfile
@@ -25,15 +31,21 @@ class PhysicalFitnessCalculator(object):
         ]
 
     def copy_genotypes(self, genotypes):
+        """
+        Copies a set of genotypes
+        """
         copys = []
         for genotype in genotypes:
             copys.append(genotype.copy())
         return copys
 
     def ascertain_fitness(self, genotypes):
+        """
+        Gets the fitnesses for a set of genotypes
+        """
         num_models = len(self.model_paths)
         copy_genotypes = self.copy_genotypes(genotypes)
-        fitness = []
+        fitnesses = []
         path_to_print_exe = '/examples/print_gcode_file.py'
         while len(copy_genotypes) > 0:
             to_print = copy_genotypes[:num_models]
@@ -44,10 +56,10 @@ class PhysicalFitnessCalculator(object):
                 os.path.join(EvolveProfile.s3g_path, path_to_print_exe),
                 '-f %s' % (all_path)
             ])
-            fitnesses = self.HCI.ask_fitness(num_models)
-            fitness.extend(fitnesses)
+            fitness = self.HCI.ask_fitness(num_models)
+            fitnesses.extend(fitness)
             copy_genotypes = copy_genotypes[num_models:]
-        return fitness
+        return fitnesses
 
     def get_profiles(self, genotypes):
         profiles = [genotype.profile for genotype in genotypes]
@@ -58,6 +70,12 @@ class PhysicalFitnessCalculator(object):
         return [comment] + self.model_transition
 
     def get_model_paths(self, model_dir):
+        """
+        Retrieves all stl models in a specific directory
+
+        @param str model_dir: Directory to look in
+        @return list models: List of paths to all stl models
+        """
         models = []
         for model in os.listdir(model_dir):
             ext = os.path.splitext(model)
